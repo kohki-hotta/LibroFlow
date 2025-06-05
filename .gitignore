@@ -1,0 +1,37 @@
+## Visual Studio
+.vs
+
+###################
+# compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.cache
+*.suo
+
+###############
+# Directories #
+###############
+bin/
+obj/
+
+########
+# Logs #
+########
+*.log
+
+############
+# Settings #
+############
+appsettings.json
+
+###########
+# Publish #
+###########
+*.pubxml.user
+*.pubxml
+*.publishproj
