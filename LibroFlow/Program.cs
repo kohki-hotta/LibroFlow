@@ -2,6 +2,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<LibroFlow.Domain.Repositories.IBookRepository, LibroFlow.Infrastructure.Repositories.InMemoryBookRepository>();
+builder.Services.AddSingleton<LibroFlow.Domain.Repositories.IMemberRepository, LibroFlow.Infrastructure.Repositories.InMemoryMemberRepository>();
+builder.Services.AddSingleton<LibroFlow.Domain.Repositories.ILoanRepository, LibroFlow.Infrastructure.Repositories.InMemoryLoanRepository>();
+builder.Services.AddSingleton<LibroFlow.Domain.Repositories.IReservationRepository, LibroFlow.Infrastructure.Repositories.InMemoryReservationRepository>();
+builder.Services.AddSingleton<LibroFlow.Domain.Events.IDomainEventDispatcher, LibroFlow.Domain.Events.LoggingEventDispatcher>();
+builder.Services.AddScoped<LibroFlow.Application.LibraryService>();
 
 var app = builder.Build();
 
