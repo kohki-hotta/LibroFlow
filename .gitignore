@@ -35,3 +35,6 @@ appsettings.json
 *.pubxml.user
 *.pubxml
 *.publishproj
+
+# Visual Studio user-specific project files should not be committed
+*.csproj.user
